@@ -1,0 +1,231 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="一、什么是SQL注入SQL 注入（SQLi）是一种注入攻击，，可以执行恶意 SQL 语句。它通过将任意 SQL 代码插入数据库查询，使攻击者能够完全控制 Web 应用程序后面的数据库服务器。攻击者可以使用 SQL 注入漏洞绕过应用程序安全措施；可以绕过网页或 Web 应用程序的身份验证和授权，并检索整个 SQL 数据库的内容；还可以使用 SQL 注入来添加，修改和删除数据库中的记录。 SQL 注入">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2022/04/22/SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="一、什么是SQL注入SQL 注入（SQLi）是一种注入攻击，，可以执行恶意 SQL 语句。它通过将任意 SQL 代码插入数据库查询，使攻击者能够完全控制 Web 应用程序后面的数据库服务器。攻击者可以使用 SQL 注入漏洞绕过应用程序安全措施；可以绕过网页或 Web 应用程序的身份验证和授权，并检索整个 SQL 数据库的内容；还可以使用 SQL 注入来添加，修改和删除数据库中的记录。 SQL 注入">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-04-22T03:21:09.180Z">
+<meta property="article:modified_time" content="2022-04-22T05:57:13.349Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-SQL注入漏洞" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/04/22/SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E/" class="article-date">
+  <time class="dt-published" datetime="2022-04-22T03:21:09.180Z" itemprop="datePublished">2022-04-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <p>一、什么是SQL注入<br>SQL 注入（SQLi）是一种注入攻击，，可以执行恶意 SQL 语句。它通过将任意 SQL 代码插入数据库查询，使攻击者能够完全控制 Web 应用程序后面的数据库服务器。攻击者可以使用 SQL 注入漏洞绕过应用程序安全措施；可以绕过网页或 Web 应用程序的身份验证和授权，并检索整个 SQL 数据库的内容；还可以使用 SQL 注入来添加，修改和删除数据库中的记录。</p>
+<p>SQL 注入漏洞可能会影响使用 SQL 数据库（如 MySQL，Oracle，SQL Server 或其他）的任何网站或 Web 应用程序。犯罪分子可能会利用它来未经授权访问用户的敏感数据：客户信息，个人数据，商业机密，知识产权等。SQL 注入攻击是最古老，最流行，最危险的 Web 应用程序漏洞之一。</p>
+<p>二、SQL 注入攻击的类型<br>（一）带内注入</p>
+<p>这是典型的攻击，攻击者可以通过相同的通信通道发起攻击并获得结果。这是通过两种带内技术完成的：</p>
+<p>基于错误的 SQL 注入：从显示的错误消息中获取有关数据库的信息</p>
+<p>基于联合的 SQL 注入：依赖于攻击者能够将 UNION ALL 被盗信息的结果与合法结果连接起来。</p>
+<p>这两种技术都依赖于攻击者修改应用程序发送的 SQL，以及浏览器中显示的错误和返回的信息。如果应用程序开发人员或数据库开发人员无法正确地参数化他们在查询中使用的值，那么它会成功。两者都是试错法，可以检测到错误。</p>
+<p>（二）盲注入</p>
+<p>也称为推理 SQL 注入，盲注入攻击不会直接从目标数据库中显示数据；相反，攻击者会仔细检查行为中的间接线索。HTTP 响应中的详细信息，某些用户输入的空白网页以及数据库响应某些用户输入需要多长时间，这些都可以是线索，具体取决于攻击者的目标。他们还可以指向攻击者尝试的另一个 SQL 攻击途径。</p>
+<p>（三）带外注入</p>
+<p>这种攻击有点复杂，当攻击者无法在单个直接查询 - 响应攻击中实现其目标时，攻击者可能会使用此攻击。通常，攻击者会制作 SQL 语句，这些语句在呈现给数据库时会触发数据库系统创建与攻击者控制的外部服务器的连接。以这种方式，攻击者可以收集数据或可能控制数据库的行为。</p>
+<p>二阶注入就是一种带外注入攻击。在这种情况下，攻击者将提供 SQL 注入，该注入将由数据库系统的单独行为存储和执行。当二级系统行为发生时（它可能类似于基于时间的作业或由其他典型管理员或用户使用数据库触发的某些事情）并且执行攻击者的 SQL 注入，那就是当 “伸出” 到系统时攻击者控制发生了。</p>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/04/22/SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E/" data-id="cl2a10uzu0000f4uw3w5d5rq0" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2022/04/22/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2022/04/22/webshell/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">April 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/04/22/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/04/22/SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/04/22/webshell/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/04/22/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E6%BC%8F%E6%B4%9E/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/04/22/XSS/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>

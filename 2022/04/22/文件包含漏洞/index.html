@@ -1,0 +1,232 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  
+  <title>Hexo</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="简介文件包含，是一个功能。在各种开发语言中都提供了内置的文件包含函数，可以使开发人员在一个代码文件中直接包含（引入）另外一个代码文件。 类型根据不同的配置环境，文件包含漏洞分为如下两种情况：1.本地文件包含漏洞（LFI）：仅能够对服务器本地的文件进行包含，由于服务器上的文件并不是攻击者所能够控制的，因此该情况下，攻击者更多的会包含一些固定的系统配置文件，从而读取系统敏感信息。很多时候本地文件包含漏">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Hexo">
+<meta property="og:url" content="http://example.com/2022/04/22/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E6%BC%8F%E6%B4%9E/index.html">
+<meta property="og:site_name" content="Hexo">
+<meta property="og:description" content="简介文件包含，是一个功能。在各种开发语言中都提供了内置的文件包含函数，可以使开发人员在一个代码文件中直接包含（引入）另外一个代码文件。 类型根据不同的配置环境，文件包含漏洞分为如下两种情况：1.本地文件包含漏洞（LFI）：仅能够对服务器本地的文件进行包含，由于服务器上的文件并不是攻击者所能够控制的，因此该情况下，攻击者更多的会包含一些固定的系统配置文件，从而读取系统敏感信息。很多时候本地文件包含漏">
+<meta property="og:locale" content="en_US">
+<meta property="article:published_time" content="2022-04-22T03:12:28.696Z">
+<meta property="article:modified_time" content="2022-04-22T03:13:48.240Z">
+<meta property="article:author" content="John Doe">
+<meta name="twitter:card" content="summary">
+  
+    <link rel="alternate" href="/atom.xml" title="Hexo" type="application/atom+xml">
+  
+  
+    <link rel="shortcut icon" href="/favicon.png">
+  
+  
+    
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/typeface-source-code-pro@0.0.71/index.min.css">
+
+  
+  
+<link rel="stylesheet" href="/css/style.css">
+
+  
+    
+<link rel="stylesheet" href="/fancybox/jquery.fancybox.min.css">
+
+  
+<meta name="generator" content="Hexo 6.1.0"></head>
+
+<body>
+  <div id="container">
+    <div id="wrap">
+      <header id="header">
+  <div id="banner"></div>
+  <div id="header-outer" class="outer">
+    <div id="header-title" class="inner">
+      <h1 id="logo-wrap">
+        <a href="/" id="logo">Hexo</a>
+      </h1>
+      
+    </div>
+    <div id="header-inner" class="inner">
+      <nav id="main-nav">
+        <a id="main-nav-toggle" class="nav-icon"></a>
+        
+          <a class="main-nav-link" href="/">Home</a>
+        
+          <a class="main-nav-link" href="/archives">Archives</a>
+        
+      </nav>
+      <nav id="sub-nav">
+        
+          <a id="nav-rss-link" class="nav-icon" href="/atom.xml" title="RSS Feed"></a>
+        
+        <a id="nav-search-btn" class="nav-icon" title="Search"></a>
+      </nav>
+      <div id="search-form-wrap">
+        <form action="//google.com/search" method="get" accept-charset="UTF-8" class="search-form"><input type="search" name="q" class="search-form-input" placeholder="Search"><button type="submit" class="search-form-submit">&#xF002;</button><input type="hidden" name="sitesearch" value="http://example.com"></form>
+      </div>
+    </div>
+  </div>
+</header>
+
+      <div class="outer">
+        <section id="main"><article id="post-文件包含漏洞" class="h-entry article article-type-post" itemprop="blogPost" itemscope itemtype="https://schema.org/BlogPosting">
+  <div class="article-meta">
+    <a href="/2022/04/22/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E6%BC%8F%E6%B4%9E/" class="article-date">
+  <time class="dt-published" datetime="2022-04-22T03:12:28.696Z" itemprop="datePublished">2022-04-22</time>
+</a>
+    
+  </div>
+  <div class="article-inner">
+    
+    
+    <div class="e-content article-entry" itemprop="articleBody">
+      
+        <h1 id="简介"><a href="#简介" class="headerlink" title="简介"></a>简介</h1><p>文件包含，是一个功能。在各种开发语言中都提供了内置的文件包含函数，可以使开发人员在一个代码文件中直接包含（引入）另外一个代码文件。</p>
+<h1 id="类型"><a href="#类型" class="headerlink" title="类型"></a>类型</h1><p>根据不同的配置环境，文件包含漏洞分为如下两种情况：<br>1.本地文件包含漏洞（LFI）：仅能够对服务器本地的文件进行包含，由于服务器上的文件并不是攻击者所能够控制的，因此该情况下，攻击者更多的会包含一些固定的系统配置文件，从而读取系统敏感信息。很多时候本地文件包含漏洞会结合一些特殊的文件上传漏洞，从而形成更大的威力。<br>2.远程文件包含漏洞（RFI）：能够通过url地址对远程的文件进行包含，这意味着攻击者可以传入任意的代码，这种情况很严重。</p>
+<h1 id="原理"><a href="#原理" class="headerlink" title="原理"></a>原理</h1><p>以PHP为例，在PHP中，提供了以下文件包含函数：</p>
+<p>include:找不到文件产生警告，脚本继续运行。<br>include_once：相对于include，文件被包含后不会再次被包含。<br>require：找不到文件，产生致命错误，脚本停止。<br>require_once：相对于require，文件被包含后不会再次被包含。<br>这些函数在代码设计中被经常使用到。大多数情况下，文件包含函数中包含的代码文件是固定的，因此也不会出现安全问题。 但是，有些时候，文件包含的代码文件被写成了一个变量，且这个变量可以由前端用户传进来，这种情况下，如果没有做足够的安全考虑，则可能会引发文件包含漏洞。攻击者会指定一个“意想不到”的文件让包含函数去执行，从而造成恶意操作。</p>
+<h1 id="仅本地文件包含"><a href="#仅本地文件包含" class="headerlink" title="仅本地文件包含"></a>仅本地文件包含</h1><p>仅本地文件包含时，</p>
+<p>可以查看本地敏感文件，如&#x2F;etc&#x2F;passwd等</p>
+<p>可以包含日志文件，通过其他手段写到日志文件，如WAF日志，ssh登录日志</p>
+<h1 id="防御"><a href="#防御" class="headerlink" title="防御"></a>防御</h1><ol>
+<li>文件包含参数写死</li>
+<li>文件包含参数不可由用户修改</li>
+<li>禁用目录跳转字符”..&#x2F;“</li>
+<li>使用文件验证白名单</li>
+</ol>
+
+      
+    </div>
+    <footer class="article-footer">
+      <a data-url="http://example.com/2022/04/22/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E6%BC%8F%E6%B4%9E/" data-id="cl2a10v2q0004f4uw2fu5anxo" data-title="" class="article-share-link">Share</a>
+      
+      
+      
+    </footer>
+  </div>
+  
+    
+<nav id="article-nav">
+  
+    <a href="/2022/04/22/webshell/" id="article-nav-newer" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Newer</strong>
+      <div class="article-nav-title">
+        
+          (no title)
+        
+      </div>
+    </a>
+  
+  
+    <a href="/2022/04/22/XSS/" id="article-nav-older" class="article-nav-link-wrap">
+      <strong class="article-nav-caption">Older</strong>
+      <div class="article-nav-title"></div>
+    </a>
+  
+</nav>
+
+  
+</article>
+
+
+</section>
+        
+          <aside id="sidebar">
+  
+    
+
+  
+    
+
+  
+    
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Archives</h3>
+    <div class="widget">
+      <ul class="archive-list"><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/04/">April 2022</a></li><li class="archive-list-item"><a class="archive-list-link" href="/archives/2022/03/">March 2022</a></li></ul>
+    </div>
+  </div>
+
+
+  
+    
+  <div class="widget-wrap">
+    <h3 class="widget-title">Recent Posts</h3>
+    <div class="widget">
+      <ul>
+        
+          <li>
+            <a href="/2022/04/22/%E6%96%87%E4%BB%B6%E4%B8%8A%E4%BC%A0%E6%BC%8F%E6%B4%9E/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/04/22/SQL%E6%B3%A8%E5%85%A5%E6%BC%8F%E6%B4%9E/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/04/22/webshell/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/04/22/%E6%96%87%E4%BB%B6%E5%8C%85%E5%90%AB%E6%BC%8F%E6%B4%9E/">(no title)</a>
+          </li>
+        
+          <li>
+            <a href="/2022/04/22/XSS/">(no title)</a>
+          </li>
+        
+      </ul>
+    </div>
+  </div>
+
+  
+</aside>
+        
+      </div>
+      <footer id="footer">
+  
+  <div class="outer">
+    <div id="footer-info" class="inner">
+      
+      &copy; 2022 John Doe<br>
+      Powered by <a href="https://hexo.io/" target="_blank">Hexo</a>
+    </div>
+  </div>
+</footer>
+
+    </div>
+    <nav id="mobile-nav">
+  
+    <a href="/" class="mobile-nav-link">Home</a>
+  
+    <a href="/archives" class="mobile-nav-link">Archives</a>
+  
+</nav>
+    
+
+
+<script src="/js/jquery-3.4.1.min.js"></script>
+
+
+
+  
+<script src="/fancybox/jquery.fancybox.min.js"></script>
+
+
+
+
+<script src="/js/script.js"></script>
+
+
+
+
+
+  </div>
+</body>
+</html>
